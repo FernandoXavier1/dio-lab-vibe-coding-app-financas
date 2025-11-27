@@ -44,7 +44,7 @@ Usei prompts refinados no **Copilot Web** e enviei para o **Lovable**, que gerou
 
 ---
 
-## PROMPT FINQUEST (MVP GAMIFICADO)
+## 💻 **PROMPT FINQUEST (MVP GAMIFICADO)**
 
 Quero gerar um MVP chamado FinQuest, um aplicativo mobile com foco em jovens (16–30 anos) que transforma um diagnóstico financeiro em uma jornada gamificada baseada em níveis, missões e educação financeira guiada por IA.
 
@@ -188,7 +188,7 @@ Persistência simples de estado (sem backend real)
 
 ---
 
-## 🎯 **Telas**
+## 🔍 **Telas**
 
 <img width="3008" height="1502" alt="capturas" src="https://github.com/user-attachments/assets/4583d489-7522-4a89-8ebc-51099a4d2219" />
 
