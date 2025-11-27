@@ -1,89 +1,273 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding
+PRD
 
-Aprenda a **criar soluções com IA** de forma criativa, guiando ferramentas como o **Copilot** e o **Lovable** com uma comunicação simples e natural. O foco é desenvolver o conceito de um **App de Organização de Finanças Pessoais**, mas, acima de tudo, aprender o **jeito Vibe de programar com IA**.
+🎮 FinQuest — MVP Gamificado
 
-## ✨ O que é Vibe Coding
+Quero criar um aplicativo chamado FinQuest, focado em jovens e gamificação, para oferecer um diagnóstico financeiro em formato de jogo.
+Abaixo está o PRD completo usado para gerar o MVP com fluxo de telas, lógica e componentes.
 
-**Vibe Coding** é uma forma leve e criativa de desenvolver com IA, baseada em **conversas naturais e bem estruturadas**. Você não precisa escrever código linha por linha. Em vez disso, aprende a **guiar a IA** descrevendo suas ideias de forma clara, com **intenção e contexto**. Em outras palavras:
+📌 Contexto
 
-> Você mostra a vibe da sua ideia e a IA transforma em solução (ou em um caminho para ela).
+O FinQuest é um app de educação financeira gamificada.
+A jornada do usuário funciona como um RPG financeiro, onde ele passa por níveis, recebe missões e sobe de ranking conforme organiza sua vida financeira.
 
-## 🎯 Desafio
+Toda interação é conduzida por IA via chat, de forma leve, simples e motivadora.
 
-Problema: Muitas pessoas não conseguem manter um controle financeiro porque os aplicativos exigem muita entrada de dados manual, e a criação de orçamentos é vista como algo tedioso. 
+🎯 Objetivo Principal
 
-Precisamos de uma solução que permita **controlar as finanças por meio de uma conversa simples**, com **agentes de IA** capazes de criar **planos de economia personalizados e automatizados**. Você deve utilizar as ideias de **Vibe Coding** e **MVP (Produto Mínimo Viável)** para desenvolver o **conceito de um aplicativo** que resolva o problema citado.
+Criar um MVP funcional com:
 
-> [!IMPORTANT]
-> Você **não precisa construir o código**! O foco está em **usar a IA como sua parceira criativa**, transformando boas ideias e prompts em conceitos funcionais que simulam um produto real.
+fluxo de chat,
 
-## 🪄 Etapas do Desafio
+telas de progresso,
 
-### 1. Saber o que Pedir é a Chave! Otimize seus Prompts!
+e uma "pizza de investimentos" para usuários classificados como poupadores.
 
-Antes de pedir para a IA "criar um app", é importante definir com clareza o que você quer construir e por quê. Para isso, você vai criar um **PRD (Product Requirements Document)** simplificado, uma especificação que serve como _briefing_ para a IA entender sua ideia.
+🧑‍💻 Público-alvo
 
-Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
+Jovens 16 a 30 anos que querem aprender finanças de um jeito:
 
-```txt
-# Contexto
-Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
-A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
+fácil
 
-# Problema
-Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
-Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
+prático
 
-# Público-Alvo
-Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
+gamificado
 
-# Funcionalidades-Chave
-1. Registrar gastos via chat em linguagem natural.  
-2. Classificar automaticamente as transações.  
-3. Definir e acompanhar metas financeiras.  
-4. Receber dicas de economia do “Agente Financeiro”.  
-5. Visualizar relatórios simples e personalizados.
+Principalmente iniciantes que não gostam de planilhas ou apps complexos.
 
-# Entregável da IA
-Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
-Usar tom educativo e linguagem acessível, em português.
-```
+🏆 Níveis Financeiros (Gamificação)
 
-Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
+O usuário progride nos níveis conforme responde às perguntas e cumpre missões:
 
-> [!TIP]
-> Pense no PRD/Prompt como “o briefing que a IA precisa para entender sua vibe”. Portanto, quanto mais claro e intencional for o texto, mais próximas do ideal serão as respostas da IA.
+🟥 Sobrevivente (endividado)
 
-### 2. Explorando o Lovable na Prática
+🟧 Equilibrado
 
-Com seu PRD pronto e revisado, é hora de colocar a IA em ação. Abra o Lovable, cole seu prompt completo e peça o plano inicial do MVP do seu aplicativo. Como o plano gratuito limita você a 5 interações por dia, seja estratégico:
-- Faça perguntas diretas e construtivas, como “crie o fluxo de telas com base nas funcionalidades listadas” ou “gere uma versão resumida do plano de MVP”;
-- Priorize clareza nas instruções para aproveitar ao máximo cada resposta;
+🟨 Planejador
 
-Durante essa etapa, você pode orientar a IA para três entregas principais:
-1. Agente Financeiro: defina o comportamento e o tom de voz de um consultor financeiro pessoal, alinhado ao público e objetivo do app.
-2. Fluxo de Telas: peça à IA para gerar o fluxo conceitual de telas com base nas funcionalidades descritas no PRD, simulando a interação por conversa.
-3. Plano de MVP: solicite um resumo das 5 funcionalidades principais, dos recursos necessários e um plano de validação inicial (como medir se o app cumpre seu propósito).
+🟩 Investidor
 
-> [!TIP]
-> Se preferir, você pode fazer tudo com o **Copilot**. O importante é exercitar a habilidade de transformar intenções em instruções claras e testar os limites da IA como parceira criativa.
+🟦 Mestre (referência futura)
 
-### 3. Entregando o Desafio na DIO
+Cada nível libera novas missões.
 
-Finalize seu projeto criando um **repositório no GitHub** (pode ser um **fork** deste).  
-No README do seu repositório, inclua:
+🗺️ Missões do App
 
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
+⚡ Missão Corte Rápido – cortar gastos de uma categoria
 
-> [!TIP]
-> Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
+💳 Missão Cartão Único – usar apenas um cartão sem anuidade
 
-## 💬 Conclusão
+💼 Missão Reserva – montar reserva de emergência
 
-Vibe Coding é sobre clareza, curiosidade e criatividade, não sobre perfeição técnica. O verdadeiro objetivo aqui é aprender a pensar junto com a IA, transformando ideias em conceitos reais e enxergando a tecnologia como uma extensão do seu raciocínio criativo. Cada interação é um experimento, quanto mais clara for sua intenção, mais surpreendente será o resultado.
+🎯 Missão Perfil de Investidor – definir perfil
+
+📊 Missão Pizza de Investimentos – aprender cada classe de ativo
+
+⏳ Missão Previdência Inteligente – aprender a “pagar-se primeiro”
+
+📈 Score Financeiro
+
+O app calcula um Score FinQuest (0–1000) baseado em:
+
+renda
+
+gastos estimados
+
+dívidas
+
+existência de reserva
+
+missões cumpridas
+
+🧭 Fluxo do App (MVP)
+🟦 Tela 1 — Onboarding
+
+Explica que o app é um jogo de evolução financeira
+
+Botão “Começar”
+
+🟪 Tela 2 — Chat com IA (Diagnóstico Rápido)
+
+IA pergunta, uma por vez:
+
+Renda líquida
+
+Valor da fatura do cartão
+
+Tem dívidas?
+
+Está no SPC/Serasa?
+
+Quantos cartões usa?
+
+Tem reserva de emergência?
+
+A IA classifica automaticamente o nível inicial.
+
+🟩 Tela 3 — Bens e Objetivos
+
+Perguntas simples:
+
+Tem moto, carro ou casa?
+
+Está quitado?
+
+Quer comprar algum dos três nos próximos 12 meses?
+
+Se sim → sugerir consórcio como alternativa educativa.
+
+🟨 Tela 4 — Caminhos
+Se for Sobrevivente
+
+IA libera missões:
+
+Corte Rápido
+
+Cartão Único
+
+30 Dias no Verde
+
+Se for Poupador / Planejador
+
+IA inicia a Análise de Perfil de Investidor
+
+🟧 Tela 5 — Análise de Perfil
+
+Perguntas rápidas:
+
+Prazo
+
+Tolerância ao risco
+
+Objetivos
+
+Conhecimento
+
+Classificação:
+
+Conservador
+
+Moderado
+
+Arrojado
+
+🟦 Tela 6 — Pizza de Investimentos
+
+Mostrar gráfico com:
+
+Tesouro
+
+CDB/LCI
+
+Fundos
+
+Previdência
+
+ETFs / ações
+
+Cada fatia abre uma explicação educativa simples.
+
+🟩 Tela 7 — Trilhas Educativas
+
+Aulas curtas sobre:
+
+Renda fixa
+
+Renda variável
+
+Fundos
+
+Previdência (foco em “pague-se primeiro”)
+
+🟫 Tela 8 — Painel do Jogador
+
+Exibe:
+
+Score FinQuest
+
+Nível atual
+
+Missões abertas
+
+Progresso semanal
+
+Botão “Falar com IA”
+
+🔧 Funcionalidades-Chave do MVP
+
+Chat com IA conduzindo toda a jornada
+
+Diagnóstico automático com poucas perguntas
+
+Classificação por nível financeiro
+
+Missões básicas para evolução
+
+Análise de perfil de investidor
+
+Pizza de investimentos
+
+Painel com ranking, missões e score
+
+🛠️ Tarefas para o Lovable
+
+Criar o fluxo de telas completo
+
+Interface moderna, estilo jovem/gamer
+
+Componentes obrigatórios:
+
+Tela de chat
+
+Tela de missões
+
+Painel de score
+
+Pizza de investimentos
+
+Níveis do jogador
+
+Criar lógica básica de:
+
+classificação de nível
+
+score inicial
+
+exibição de missões
+
+Criar estrutura navegável (mesmo sem backend real)
+
+🧠 Tom da IA do FinQuest
+
+A IA deve ser:
+
+simples
+
+motivadora
+
+objetiva
+
+zero formalidade
+
+estilo “consultor amigo”
+
+Exemplo de tom:
+
+“Bora ver em que nível financeiro você está? Nada de julgamento — é só o começo da sua jornada.”
+
+🚀 Entregável Esperado
+
+Quero um MVP navegável com:
+
+telas
+
+chat
+
+missões
+
+score
+
+pizza de investimentos
+
+navegação funcional
+
+Tudo simples, leve e gamificado.
