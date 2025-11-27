@@ -1,209 +1,240 @@
-PRD
-#########################################################################################
 
-🎮 FinQuest — MVP Gamificado
+# 🎮 **FinQuest — Seu RPG de Educação Financeira**
 
-Quero criar um aplicativo chamado FinQuest, focado em jovens e gamificação, para oferecer um diagnóstico financeiro em formato de jogo.
-Abaixo está o PRD completo usado para gerar o MVP com fluxo de telas, lógica e componentes.
+Projeto desenvolvido no **Desafio Vibe Coding da DIO**, utilizando **Lovable** e **Copilot Web** para criar um app de **diagnóstico financeiro gamificado**.
+A proposta é simples: transformar sua vida financeira em um **jogo** com níveis, missões e evolução guiada por IA.
 
-📌 Contexto
+---
 
-O FinQuest é um app de educação financeira gamificada.
-A jornada do usuário funciona como um RPG financeiro, onde ele passa por níveis, recebe missões e sobe de ranking conforme organiza sua vida financeira.
+## 🧠 **Visão Geral**
 
-Toda interação é conduzida por IA via chat, de forma leve, simples e motivadora.
+O FinQuest é um app onde o usuário conversa com uma IA que:
 
-🎯 Objetivo Principal
+* analisa sua situação financeira
+* define seu nível (Sobrevivente → Investidor)
+* libera missões
+* explica conceitos de forma simples
+* ajuda a montar uma estratégia de evolução
 
-Criar um MVP funcional com:
+Tudo em um fluxo leve, divertido e sem burocracia.
 
-fluxo de chat,
-telas de progresso,
-e uma "pizza de investimentos" para usuários classificados como poupadores.
+---
 
-🧑‍💻 Público-alvo
+## 🎯 **Funcionalidades Principais**
 
-Jovens 16 a 30 anos que querem aprender finanças de um jeito:
+* 💬 **Chat com IA** para diagnóstico
+* 🏅 **Níveis financeiros** para acompanhar evolução
+* 🗺️ **Missões práticas** (corte rápido, cartão único, reserva)
+* 📊 **Pizza de Investimentos** explicada de forma simples
+* 🔍 **Perfil de investidor** (Conservador / Moderado / Arrojado)
+* 📈 **Score FinQuest (0–1000)**
+* 🎓 **Trilhas educativas** curtas e diretas
 
-fácil
-prático
-gamificado
+---
 
-Principalmente iniciantes que não gostam de planilhas ou apps complexos.
+## 💬 **Como usei o Lovable**
 
-🏆 Níveis Financeiros (Gamificação)
+Usei prompts refinados no **Copilot Web** e enviei para o **Lovable**, que gerou:
 
-O usuário progride nos níveis conforme responde às perguntas e cumpre missões:
+* telas do fluxo completo
+* chat funcional
+* painel de evolução
+* pizza de investimentos
+* lógica básica de níveis, missões e score
 
-🟥 Sobrevivente (endividado)
-🟧 Equilibrado
-🟨 Planejador
-🟩 Investidor
-🟦 Mestre (referência futura)
+FINQUEST (MVP GAMIFICADO)
 
-Cada nível libera novas missões.
+Quero gerar um MVP chamado FinQuest, um aplicativo mobile com foco em jovens (16–30 anos) que transforma um diagnóstico financeiro em uma jornada gamificada baseada em níveis, missões e educação financeira guiada por IA.
 
-🗺️ Missões do App
-⚡ Missão Corte Rápido – cortar gastos de uma categoria
-💳 Missão Cartão Único – usar apenas um cartão sem anuidade
-💼 Missão Reserva – montar reserva de emergência
-🎯 Missão Perfil de Investidor – definir perfil
-📊 Missão Pizza de Investimentos – aprender cada classe de ativo
-⏳ Missão Previdência Inteligente – aprender a “pagar-se primeiro”
-📈 Score Financeiro
+Arquitetura Geral do MVP
 
-O app calcula um Score FinQuest (0–1000) baseado em:
+Front-end: fluxo conversacional + telas de progresso.
 
-renda
-gastos estimados
-dívidas
-existência de reserva
-missões cumpridas
+Lógica local: classificação financeira, score, níveis, missões e exibição das trilhas.
 
-🧭 Fluxo do App (MVP)
-🟦 Tela 1 — Onboarding
+Sem backend complexo: apenas persistência local/estados mockados.
 
-Explica que o app é um jogo de evolução financeira
+Componentes essenciais:
 
-Botão “Começar”
+Chat com IA
 
-🟪 Tela 2 — Chat com IA (Diagnóstico Rápido)
+Tela de Missões
 
-IA pergunta, uma por vez:
+Dashboard (nível, score, progresso)
+
+Tela de Bens/Objetivos
+
+Perfil de investidor
+
+“Pizza de Investimentos” (gráfico de composição)
+
+Fluxo Técnico do App
+
+Onboarding
+
+Tela de apresentação com explicação breve do conceito (“RPG financeiro”).
+
+Botão de iniciar → leva para o chat com IA.
+
+Armazena estado inicial do usuário (level = null, score = 0).
+
+Chat — Módulo de Diagnóstico
+
+IA faz perguntas sequenciais (usar mensagens e UI de input curto):
 
 Renda líquida
-Valor da fatura do cartão
-Tem dívidas?
-Está no SPC/Serasa?
-Quantos cartões usa?
-Tem reserva de emergência?
 
-A IA classifica automaticamente o nível inicial.
+Fatura do cartão
 
-🟩 Tela 3 — Bens e Objetivos
+Dívidas (boolean + valor opcional)
 
-Perguntas simples:
+Status SPC/Serasa
 
-Tem moto, carro ou casa?
-Está quitado?
-Quer comprar algum dos três nos próximos 12 meses?
-Se sim → sugerir consórcio como alternativa educativa.
+Quantos cartões utiliza
 
-🟨 Tela 4 — Caminhos
+Tem reserva (boolean)
 
-Se for Sobrevivente
+Regras de classificação (lógica local):
 
-IA libera missões:
+Dívida alta ou gasto > renda → Sobrevivente
 
-Corte Rápido
-Cartão Único
-30 Dias no Verde
-Se for Poupador / Planejador
+Fatura equilibrada → Equilibrado
 
-IA inicia a Análise de Perfil de Investidor
+Reserva + controle básico → Planejador
 
-🟧 Tela 5 — Análise de Perfil
+Sobra mensal + interesse em investir → Investidor
 
-Perguntas rápidas:
+Armazenar resultado em user.level.
 
-Prazo
-Tolerância ao risco
-Objetivos
-Conhecimento
+Tela de Bens e Objetivos
+
+Inputs simples: moto, carro, casa, quitado/financiado, e intenção de compra.
+
+Se intenção = true → liberar componente informativo sobre consórcio.
+
+Trilhas (Baseadas no Nível)
+
+Se user.level = “Sobrevivente”
+
+Gerar lista de missões:
+
+Missão Corte Rápido (reduzir gasto em categoria X)
+
+Missão Cartão Único (educação sobre cartão sem anuidade)
+
+Missão 30 Dias no Verde
+
+Se user.level = “Equilibrado” ou “Planejador”
+
+Mostrar trilha para organização e reserva.
+
+Se user.level = “Investidor”
+
+Abrir módulo Perfil de Investidor.
+
+Perfil de Investidor
+
+Perguntas (risco, prazo, objetivos, conhecimento).
 
 Classificação:
 
 Conservador
+
 Moderado
+
 Arrojado
 
-🟦 Tela 6 — Pizza de Investimentos
+Armazenar em user.investorProfile.
 
-Mostrar gráfico com:
+Pizza de Investimentos
+
+Gerar gráfico (componente “pie chart”) com as fatias:
 
 Tesouro
-CDB/LCI
+
+CDB
+
+LCI/LCA
+
 Fundos
+
 Previdência
-ETFs / ações
 
-Cada fatia abre uma explicação educativa simples.
+ETFs/Ações
 
-🟩 Tela 7 — Trilhas Educativas
+Peso das fatias baseado no user.investorProfile.
 
-Aulas curtas sobre:
+Cada clique abre card explicativo (texto curto).
+
+Trilhas Educativas
+
+Módulo com cards:
 
 Renda fixa
-Renda variável
+
+Variável
+
 Fundos
-Previdência (foco em “pague-se primeiro”)
 
-🟫 Tela 8 — Painel do Jogador
+Previdência (“pague-se primeiro”)
 
-Exibe:
+Dashboard (Painel do Jogador)
 
-Score FinQuest
-Nível atual
-Missões abertas
-Progresso semanal
-Botão “Falar com IA”
+Score FinQuest (0–1000): calculado por fórmula simples:
 
-🔧 Funcionalidades-Chave do MVP
+score = base + missões cumpridas + nível + consistência
 
-Chat com IA conduzindo toda a jornada
-Diagnóstico automático com poucas perguntas
-Classificação por nível financeiro
-Missões básicas para evolução
-Análise de perfil de investidor
-Pizza de investimentos
-Painel com ranking, missões e score
+Exibição dos níveis
 
-🛠️ Tarefas para o Lovable
+Missões pendentes
 
-Criar o fluxo de telas completo
-Interface moderna, estilo jovem/gamer
-Componentes obrigatórios:
-Tela de chat
-Tela de missões
-Painel de score
-Pizza de investimentos
-Níveis do jogador
-Criar lógica básica de:
-classificação de nível
-score inicial
-exibição de missões
-Criar estrutura navegável (mesmo sem backend real)
+Botão para reabrir o chat com IA
 
-🧠 Tom da IA do FinQuest
+Comportamento da IA
 
-A IA deve ser:
+Deve conduzir todas as etapas por chat.
 
-simples
-motivadora
-objetiva
-zero formalidade
-estilo “consultor amigo”
+Estilo: curto, direto, motivador.
 
-Exemplo de tom:
+Deve validar entradas básicas (tipo renda numérica).
 
-“Bora ver em que nível financeiro você está? Nada de julgamento — é só o começo da sua jornada.”
+Deve disparar rotas no fluxo conforme respostas.
 
-🚀 Entregável Esperado
+Pode oferecer resumo semanal: detecção simples baseada nas respostas salvas localmente (mock).
 
-Quero um MVP navegável com:
+Requisitos Visuais
 
-telas
-chat
-missões
-score
-pizza de investimentos
-navegação funcional
+Interface jovem, cores vibrantes.
 
-Tudo simples, leve e gamificado.
+Elementos de RPG: níveis, barras de progresso, badges.
 
-###############################################################################################
+Componentes limpos e minimalistas.
 
-TELAS
+“Pizza de Investimentos” com cores distintas e acessíveis.
+
+Entregável Requerido
+
+Gerar:
+
+Fluxo de telas completo
+
+Navegação entre telas
+
+Chat funcional (mock)
+
+Dashboard com score
+
+Módulo de missões
+
+Módulo de perfil de investidor
+
+Módulo da pizza de investimentos
+
+Persistência simples de estado (sem backend real)
+
+---
+
+## 🎯 **Telas**
 
 <img width="572" height="751" alt="Captura de tela 2025-11-27 072619" src="https://github.com/user-attachments/assets/1e1850e2-be76-4733-a4c6-d5f0c5e14fb0" />
 
@@ -221,7 +252,17 @@ TELAS
 
 <img width="673" height="739" alt="Captura de tela 2025-11-27 072755" src="https://github.com/user-attachments/assets/9540e80a-af09-4691-bcd9-23e7795765ab" />
 
-############################################################################################
+---
+
+## 🧠 **Reflexão Rápida**
+
+* **O que funcionou:** PRD refinado → interações mais eficientes no Lovable.
+* **Desafio:** O app funcionou bem nas primeiras interações, mas não conseguiu gerar o diagnóstico financeiro.
+* **Aprendizado:** O projeto precisa de mais desenvolvimento.
+
+
+
+
 
 
 
